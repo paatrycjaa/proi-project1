@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /**
 *Name : main.cpp
 *Purpose : PROI Projekt_1 - figury w pudelku
@@ -51,4 +52,6 @@ int main(){
 
     return 0;
 }
+=======
+>>>>>>> 48f5426deff4ae0cc76e0d807542cc6ada8084cf
 
