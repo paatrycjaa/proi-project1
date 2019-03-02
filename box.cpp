@@ -7,63 +7,32 @@
 
 #include <iostream>
 #include <string>
-#include "box.h"
 
 using namespace std;
-
-class Figure{
-
-public:
-    Figure(){ //konstruktor
-        name = "null";
-        color = "null";
-    }
-
+#include "box.h"
+#include "figure.h"
     //dostep
-    string getName() const{
-        return name;
-    }
-    string getColor() const{
-        return color;
-    }
-    //modyfikacja
-    void setName( string change ){
-        name = change;
-    }
-    void setColor( string change ){
-        color = change;
-    }
 
-};
+Box::Box(){
+}
 
-class Box {
-    private:
-        string color;
-        Figure leftTop;
-        Figure rightTop;
-        Figure leftBottom;
-        Figure rightBottom;
-
-    public:
-
-        //dostep
-        string getFigureColor( int index ){
-            string temp;
-            switch (index){
-            case 1: temp = leftTop.getColor();
+string Box::getFigureColor( int index ) const{
+    string temp;
+    switch (index){
+        case 1: temp = leftTop.getColor();
                 break;
-            case 2: temp = rightTop.getColor();
+        case 2: temp = rightTop.getColor();
                 break;
-            case 3: temp = leftBottom.getColor();
+        case 3: temp = leftBottom.getColor();
                 break;
-            case 4: temp = rightBottom.getColor();
+        case 4: temp = rightBottom.getColor();
                 break;
-            default: cout << "Mozna wybrac w zakresie 1-4" << endl;
-            }
-            return temp;
-        }
+        default: cout << "Mozna wybrac w zakresie 1-4" << endl;
+    }
+    return temp;
+}
 
-        string getFigureName( int index ){
+string Box::getFigureName( int index ) const{
             string temp;
             switch (index){
             case 1: temp = leftTop.getName();
@@ -80,7 +49,7 @@ class Box {
         }
 
         //modyfikacje
-        void addFigure( int index, string name, string color ){
+        void Box::addFigure( int index, string name, string color ){
             if (getFigureName( index ) != "null"){
                 cout << "W tej przegrodzie jest juz figura" << endl;
             }
@@ -105,7 +74,7 @@ class Box {
             }
         }
 
-        void deleteFigure( int index ){
+        void Box::deleteFigure( int index ){
             if (getFigureName( index ) == "null"){
                 cout << "W tej przegrodzie nie ma figury" << endl;
             }
@@ -129,7 +98,7 @@ class Box {
             }
         }
 
-};
+;
 
 void printBoxes (Box firstBox){
     for(int i =1 ; i<5; i++){

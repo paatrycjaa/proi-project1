@@ -8,27 +8,12 @@
 #ifndef BOX_H_
 #define BOX_H_
 
-class Figure{
-
-private:
-    string name;
-    string color;
-
-public:
-    Figure();
-
-    //dostep
-    string getName() const;
-    string getColor() const;
-    //modyfikacja
-    void setName( string change );
-    void setColor( string change );
-
-};
+#include <string>
+#include "figure.h"
 
 class Box {
 private:
-    string color;
+    std::string color;
     Figure leftTop;
     Figure rightTop;
     Figure leftBottom;
@@ -39,11 +24,10 @@ public:
     Box();
 
     //dostep
-    string getFigureColor( int index );
-    string getFigureName( int index );
-
+    std::string getFigureColor ( int index ) const;
+    std::string getFigureName  (int index ) const;
     //modyfikacje
-    void addFigure( int index, string name, string color ){;
+    void addFigure( int index, std::string name, std::string color );
     void deleteFigure( int index );
 };
 
@@ -51,7 +35,7 @@ void printBoxes (Box firstBox);
 void printStart();
 int whichBox();
 int whichBoxPart();
-string whichName();
-string whichColor();
+std::string whichName();
+std::string whichColor();
 
 #endif //BOX_H_
