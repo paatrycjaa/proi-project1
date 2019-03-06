@@ -2,7 +2,7 @@
 *Name : main.cpp
 *Purpose : PROI Projekt_1 - figury w pudelku
 *@author Patrycja Cieplicka
-*@version 1.0 2/03/2019
+*@version 2.0 6/03/2019
 */
 
 #include <iostream>
@@ -15,8 +15,15 @@ int main(){
 
     Box firstBox;
     Box secondBox;
+
+
     int *boxes = new int[2];
     Box *boxestwo = new Box[3];
+    int x = 0;
+    delete [] boxes;
+    boxes[1] = 4.3;
+    cout << boxes[1] << endl;
+
 
     int process = 1;
     int action;
@@ -43,16 +50,12 @@ int main(){
                     secondBox.deleteFigure(whichBoxPart());
                 break;
             case 4:
-                process = 0;
+                process = 0/x;
                 break;
             default:
                 cout << "Zly numer. Wpisz ponownie" << endl;
         }
     }
-    delete [] boxes;
-
-    boxes[1] = 4;
-
 
 
     return 0;
