@@ -48,6 +48,7 @@ int main(){
                 cout << "Zly numer. Wpisz ponownie" << endl;
         }
     }
+    delete [] boxes;
     free(boxes);
 
 
