@@ -15,7 +15,8 @@ int main(){
 
     Box firstBox;
     Box secondBox;
-    Box *boxes = new Box[2];
+    int *boxes = new int[2];
+    Box *boxestwo = new Box[3];
 
     int process = 1;
     int action;
@@ -49,6 +50,9 @@ int main(){
         }
     }
     delete [] boxes;
+
+    boxes[1] = 4;
+
 
 
     return 0;
