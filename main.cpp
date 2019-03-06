@@ -49,7 +49,6 @@ int main(){
         }
     }
     delete [] boxes;
-    free(boxes);
 
 
     return 0;
