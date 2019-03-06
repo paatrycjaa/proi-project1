@@ -15,6 +15,7 @@ int main(){
 
     Box firstBox;
     Box secondBox;
+    Box *boxes = new Box[2];
 
     int process = 1;
     int action;
@@ -47,6 +48,7 @@ int main(){
                 cout << "Zly numer. Wpisz ponownie" << endl;
         }
     }
+    free(boxes);
 
 
     return 0;
