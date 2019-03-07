@@ -16,35 +16,37 @@ int main(){
     Box firstBox;
     Box secondBox;
 
+    //rozpoczenie programu
     int process = 1;
     int action;
     while (process){
         printStart();
         cin >> action;
         switch (action){
-            case 1:
-                if(whichBox() == 1)
+            case 1:                     //wypisz zawartosc skrzynki
+                if(whichBox() == 1)     //1 skrzynka
                     printBoxes(firstBox);
-                else
+                else                    //2 skrzynka
                     printBoxes(secondBox);
                 break;
-            case 2:
-                if(whichBox() == 1)
+            case 2:                     // dodaj do skrzynki
+                if(whichBox() == 1)     // 1 skrzynka
                     firstBox.addFigure(whichBoxPart(), whichName(), whichColor());
-                else
+                else                    //2 skrzynka
                     secondBox.addFigure(whichBoxPart(), whichName(), whichColor());
                 break;
-            case 3:
-                if(whichBox() == 1)
+            case 3:                     //wyjmij ze skrzynki
+                if(whichBox() == 1)     //1 skrzynka
                     firstBox.deleteFigure(whichBoxPart());
-                else
+                else                    //2 skrzynka
                     secondBox.deleteFigure(whichBoxPart());
                 break;
-            case 4:
+            case 4:                     //zamknij program
                 process = 0;
                 break;
             default:
                 cout << "Zly numer. Wpisz ponownie" << endl;
+                break;
         }
     }
 

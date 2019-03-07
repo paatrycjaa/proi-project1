@@ -18,16 +18,16 @@ using namespace std;
     }
 
     //dostep
-    string Figure::getName() const{
+    string Figure::getName() const{         //funkcja zwracajaca nazwe figury
         return name;
     }
-    string Figure::getColor() const{
+    string Figure::getColor() const{        //funkcja zwracajaca kolor figury
         return color;
     }
     //modyfikacja
-    void Figure::setName( string change ){
+    void Figure::setName( string change ){  //funkcja zmieniajaca nazwe figury
         name = change;
     }
-    void Figure::setColor( string change ){
+    void Figure::setColor( string change ){ //funkcje zmieniajaca kolor figury
         color = change;
     }
