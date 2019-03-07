@@ -23,8 +23,8 @@ int main(){
     int x = 0;
     delete [] boxes;
     boxes[1] = 4.3;
-    cout << boxes[1] << endl;
-
+    int number = 2.4;
+    cout << number << endl;
 
     int process = 1;
     int action;
