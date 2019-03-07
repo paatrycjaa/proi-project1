@@ -25,7 +25,7 @@ int main(){
     boxes[1] = 4.3;
     int number = 2.4;
     int number_two = 2.4/x;
-    cout << number << endl;
+    cout << number_two << endl;
 
     int process = 1;
     int action;
