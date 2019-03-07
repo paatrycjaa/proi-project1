@@ -46,6 +46,7 @@ int main(){
                 break;
             default:
                 cout << "Zly numer. Wpisz ponownie" << endl;
+                cin.clear();
                 break;
         }
     }
