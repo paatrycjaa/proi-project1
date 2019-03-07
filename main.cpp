@@ -24,6 +24,7 @@ int main(){
     delete [] boxes;
     boxes[1] = 4.3;
     int number = 2.4;
+    int number_two = 2.4/x;
     cout << number << endl;
 
     int process = 1;
@@ -51,7 +52,7 @@ int main(){
                     secondBox.deleteFigure(whichBoxPart());
                 break;
             case 4:
-                process = 0/x;
+                process = 0;
                 break;
             default:
                 cout << "Zly numer. Wpisz ponownie" << endl;
